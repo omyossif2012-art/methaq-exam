@@ -3,7 +3,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#24133f">
   <meta name="description" content="مفاتيح اللغة العربية - بوابة المعلمة">
   <title>دخول المعلمة | مفاتيح اللغة العربية</title>
@@ -39,12 +39,11 @@
     header p {
       margin: 5px 0 0;
       color: #eee5d5;
-      font-size: .95rem;
     }
 
     main {
       max-width: 520px;
-      margin: 55px auto;
+      margin: 45px auto;
       padding: 0 18px;
     }
 
@@ -97,7 +96,6 @@
       margin: 15px 0 7px;
       font-weight: 700;
       color: #352052;
-      font-size: .93rem;
     }
 
     input {
@@ -130,7 +128,6 @@
       font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
-      transition: .2s;
     }
 
     button:hover { background: #56317f; }
@@ -176,15 +173,9 @@
       line-height: 2;
     }
 
-    .welcome h2 {
-      color: #352052;
-      margin-bottom: 8px;
-    }
+    .welcome h2 { color: #352052; }
 
-    .logout {
-      background: #8a3045;
-    }
-
+    .logout { background: #8a3045; }
     .logout:hover { background: #702338; }
 
     footer {
@@ -202,177 +193,236 @@
 </head>
 
 <body>
-  <header>
-    <div class="brand">مفاتيح اللغة العربية</div>
-    <p>نكتشف الهيكل ونتقن المهارات</p>
-  </header>
 
-  <main>
-    <section class="panel">
-      <div class="emblem">ض</div>
+<header>
+  <div class="brand">مفاتيح اللغة العربية</div>
+  <p>نكتشف الهيكل ونتقن المهارات</p>
+</header>
 
-      <div class="motto">بِالْمِيثَاقِ نَبْلُغُ الآفَاقَ</div>
+<main>
+  <section class="panel">
 
-      <div id="loginSection">
-        <h1>دخول المعلمة</h1>
-        <p class="intro">
-          أهلًا بكِ في بوابة إدارة مراجعة اللغة العربية للصف السابع.
-          يرجى تسجيل الدخول بحساب المعلمة المعتمد.
-        </p>
+    <div class="emblem">ض</div>
+    <div class="motto">بِالْمِيثَاقِ نَبْلُغُ الآفَاقَ</div>
 
-        <form id="loginForm">
-          <label for="email">البريد الإلكتروني</label>
-          <input
-            id="email"
-            type="email"
-            autocomplete="username"
-            placeholder="أدخلي بريدك الإلكتروني"
-            required
-          >
+    <div id="loginSection">
+      <h1>دخول المعلمة</h1>
 
-          <label for="password">كلمة المرور</label>
-          <input
-            id="password"
-            type="password"
-            autocomplete="current-password"
-            placeholder="أدخلي كلمة المرور"
-            required
-          >
+      <p class="intro">
+        أهلًا بكِ في بوابة إدارة مراجعة اللغة العربية للصف السابع.
+        يرجى تسجيل الدخول بحساب المعلمة المعتمد.
+      </p>
 
-          <button id="loginButton" type="submit">تسجيل الدخول</button>
-          <div id="message" class="message" role="status" aria-live="polite"></div>
-        </form>
-      </div>
+      <form id="loginForm">
 
-      <div id="teacherSection" hidden>
-        <div class="welcome">
-          <h2 id="teacherName">مرحبًا بكِ</h2>
-          <p>تم التحقق من حسابكِ بصفتكِ المعلمة المسؤولة.</p>
-          <div class="message success">
-            تم تسجيل الدخول بنجاح. لوحة إدارة الاختبارات ستكون في المرحلة التالية.
-          </div>
-          <button id="logoutButton" class="logout" type="button">تسجيل الخروج</button>
+        <label for="email">البريد الإلكتروني</label>
+        <input
+          id="email"
+          type="email"
+          autocomplete="username"
+          placeholder="أدخلي بريدك الإلكتروني"
+          required
+        >
+
+        <label for="password">كلمة المرور</label>
+        <input
+          id="password"
+          type="password"
+          autocomplete="current-password"
+          placeholder="أدخلي كلمة المرور"
+          required
+        >
+
+        <button id="loginButton" type="submit">
+          تسجيل الدخول
+        </button>
+
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+
+      </form>
+    </div>
+
+    <div id="teacherSection" hidden>
+      <div class="welcome">
+        <h2 id="teacherName">مرحبًا بكِ</h2>
+        <p>تم التحقق من حسابكِ بصفتكِ المعلمة المسؤولة.</p>
+
+        <div class="message success" style="display:block">
+          تم تسجيل الدخول بنجاح.
+          سننتقل قريبًا إلى لوحة إدارة الاختبارات.
         </div>
+
+        <button id="logoutButton" class="logout" type="button">
+          تسجيل الخروج
+        </button>
       </div>
+    </div>
 
-      <div class="school">
-        مدرسة مربح الحلقة الثانية بنات
-        <br>
-        معلمة المادة: دعاء أحمد
-      </div>
-    </section>
-  </main>
+    <div class="school">
+      مدرسة مربح الحلقة الثانية بنات
+      <br>
+      معلمة المادة: دعاء أحمد
+    </div>
 
-  <footer>
-    © مفاتيح اللغة العربية — مدرسة مربح الحلقة الثانية بنات
-  </footer>
+  </section>
+</main>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    // بيانات الربط العامة للمشروع
-    const SUPABASE_URL = "https://lpytvzuiaawbzggkfuvr.supabase.co";
-    const SUPABASE_KEY = "sb_publishable_nYQCfaXQ5MLZsiLZBr2U0Q_l6K1BHyR";
+<footer>
+  © مفاتيح اللغة العربية — مدرسة مربح الحلقة الثانية بنات
+</footer>
 
-    const supabaseClient = window.supabase.createClient(
+<!-- تحميل مكتبة Supabase من مصدر بديل -->
+<script src="https://unpkg.com/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
+<script>
+(function () {
+  "use strict";
+
+  const SUPABASE_URL =
+    "https://lpytvzuiaawbzggkfuvr.supabase.co";
+
+  const SUPABASE_KEY =
+    "sb_publishable_nYQCfaXQ5MLZsiLZBr2U0Q_l6K1BHyR";
+
+  const loginForm = document.getElementById("loginForm");
+  const loginButton = document.getElementById("loginButton");
+  const messageBox = document.getElementById("message");
+  const loginSection = document.getElementById("loginSection");
+  const teacherSection = document.getElementById("teacherSection");
+  const teacherName = document.getElementById("teacherName");
+
+  let client = null;
+
+  function showMessage(message, type) {
+    messageBox.textContent = message;
+    messageBox.className = "message " + type;
+  }
+
+  function showLogin() {
+    loginSection.hidden = false;
+    teacherSection.hidden = true;
+  }
+
+  function showTeacher(name) {
+    teacherName.textContent = "أهلًا بكِ، " + name;
+    loginSection.hidden = true;
+    teacherSection.hidden = false;
+  }
+
+  function startApp() {
+    if (!window.supabase || !window.supabase.createClient) {
+      showMessage(
+        "تعذّر تحميل مكتبة الاتصال. يرجى تحديث الصفحة أو تجربة متصفح آخر.",
+        "error"
+      );
+      loginButton.disabled = true;
+      return;
+    }
+
+    client = window.supabase.createClient(
       SUPABASE_URL,
       SUPABASE_KEY
     );
 
-    const loginForm = document.getElementById("loginForm");
-    const loginButton = document.getElementById("loginButton");
-    const messageBox = document.getElementById("message");
-    const loginSection = document.getElementById("loginSection");
-    const teacherSection = document.getElementById("teacherSection");
-    const teacherName = document.getElementById("teacherName");
+    checkExistingSession();
+  }
 
-    function showMessage(message, type) {
-      messageBox.textContent = message;
-      messageBox.className = "message " + type;
+  async function verifyTeacher(user) {
+    const { data, error } = await client
+      .from("teacher_profiles")
+      .select("teacher_name")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (error) {
+      throw new Error(
+        "تعذّر التحقق من صلاحيات المعلمة. يرجى مراجعة إعدادات قاعدة البيانات."
+      );
     }
 
-    function showLogin() {
-      loginSection.hidden = false;
-      teacherSection.hidden = true;
+    if (!data) {
+      await client.auth.signOut();
+      throw new Error(
+        "هذا الحساب غير مسجل ضمن حسابات المعلمات المعتمدة."
+      );
     }
 
-    function showTeacher(name) {
-      teacherName.textContent = "أهلًا بكِ، " + name;
-      loginSection.hidden = true;
-      teacherSection.hidden = false;
+    showTeacher(data.teacher_name || "المعلمة");
+  }
+
+  loginForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    if (!client) {
+      showMessage("الاتصال بقاعدة البيانات غير جاهز.", "error");
+      return;
     }
 
-    async function verifyTeacher(user) {
-      const { data, error } = await supabaseClient
-        .from("teacher_profiles")
-        .select("teacher_name")
-        .eq("id", user.id)
-        .maybeSingle();
+    loginButton.disabled = true;
+    loginButton.textContent = "جارٍ التحقق...";
+
+    messageBox.className = "message";
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    try {
+      const { data, error } = await client.auth.signInWithPassword({
+        email,
+        password
+      });
 
       if (error) {
-        throw new Error("تعذّر التحقق من صلاحيات المعلمة. تأكدي من إعدادات قاعدة البيانات.");
+        throw new Error(
+          "تعذّر تسجيل الدخول. راجعي البريد الإلكتروني وكلمة المرور."
+        );
       }
 
-      if (!data) {
-        await supabaseClient.auth.signOut();
-        throw new Error("هذا الحساب غير مسجل ضمن حسابات المعلمات المعتمدة.");
-      }
+      await verifyTeacher(data.user);
 
-      showTeacher(data.teacher_name || "المعلمة");
+    } catch (error) {
+      showLogin();
+      showMessage(
+        error.message || "حدث خطأ غير متوقع.",
+        "error"
+      );
+    } finally {
+      loginButton.disabled = false;
+      loginButton.textContent = "تسجيل الدخول";
+    }
+  });
+
+  document.getElementById("logoutButton").addEventListener("click", async function() {
+    if (client) {
+      await client.auth.signOut();
     }
 
-    loginForm.addEventListener("submit", async function(event) {
-      event.preventDefault();
+    loginForm.reset();
+    showLogin();
+    messageBox.className = "message";
+  });
 
-      loginButton.disabled = true;
-      loginButton.textContent = "جارٍ التحقق...";
-      messageBox.className = "message";
-      messageBox.textContent = "";
+  async function checkExistingSession() {
+    if (!client) return;
 
-      const email = document.getElementById("email").value.trim();
-      const password = document.getElementById("password").value;
+    const { data, error } = await client.auth.getSession();
 
+    if (error) return;
+
+    if (data.session) {
       try {
-        const { data, error } = await supabaseClient.auth.signInWithPassword({
-          email: email,
-          password: password
-        });
-
-        if (error) {
-          throw new Error("تعذّر تسجيل الدخول. راجعي البريد الإلكتروني وكلمة المرور.");
-        }
-
-        await verifyTeacher(data.user);
+        await verifyTeacher(data.session.user);
       } catch (error) {
         showLogin();
-        showMessage(error.message || "حدث خطأ غير متوقع. حاولي مرة أخرى.", "error");
-      } finally {
-        loginButton.disabled = false;
-        loginButton.textContent = "تسجيل الدخول";
-      }
-    });
-
-    document.getElementById("logoutButton").addEventListener("click", async function() {
-      await supabaseClient.auth.signOut();
-      loginForm.reset();
-      showLogin();
-      messageBox.className = "message";
-    });
-
-    // التحقق من وجود جلسة سابقة عند فتح الصفحة
-    async function checkExistingSession() {
-      const { data } = await supabaseClient.auth.getSession();
-
-      if (data.session) {
-        try {
-          await verifyTeacher(data.session.user);
-        } catch (error) {
-          showLogin();
-          showMessage(error.message, "error");
-        }
+        showMessage(error.message, "error");
       }
     }
+  }
 
-    checkExistingSession();
-  </script>
+  startApp();
+
+})();
+</script>
+
 </body>
 </html>
